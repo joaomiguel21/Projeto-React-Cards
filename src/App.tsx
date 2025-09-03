@@ -31,7 +31,7 @@ function App() {
 
   return ( //Retornamos os dados no array onde linha por linha ele deve mostrar os cards com os dados que cada linha possui.
     <div className="App">
-      <h1>Cards da Equipe do Projeto PEI</h1>
+      <h1 className="page-title">Cards da Equipe do Projeto PEI</h1>
       <div className="profiles-container">
         {listaPerfis.map(perfil => (
           <Cards
