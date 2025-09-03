@@ -1,8 +1,8 @@
 import './App.css'
-import Cards from './components/Cards';
+import Cards from './components/Cards'; //Importamos o arquivo para usar aqui.
 
 function App() {
-  const meuPerfil = {
+  const meuPerfil = { //Criação de uma const para ser o perfil que sempre vai aparecer primeiro.
     id: 1,
       linkImagem: 'https://avatars.githubusercontent.com/u/136198099?s=400&u=b4ac45f8037c2e41b8f89de76d76d7cf5aa1a29c&v=4',
       nome: 'João Miguel Mendes B. Costa',
@@ -10,7 +10,7 @@ function App() {
       linkGitHub: 'https://github.com/joaomiguel21'
   };
 
-  const outrosPerfis = [
+  const outrosPerfis = [ //Criação de um array onde vai contar os outros cards que vão aparecer depois.
     {
       id: 2,
       linkImagem:'https://avatars.githubusercontent.com/u/100854214?v=4',
@@ -25,11 +25,11 @@ function App() {
       linkGitHub: 'https://github.com/edumxk'},
   ];
 
-  const outrosPerfisOrdenados = outrosPerfis.sort((a, b) => a.nome.localeCompare(b.nome));
+  const outrosPerfisOrdenados = outrosPerfis.sort((a, b) => a.nome.localeCompare(b.nome)); //Ordenar o array em ordem alfabética.
 
-  const listaPerfis = [meuPerfil, ...outrosPerfisOrdenados];
+  const listaPerfis = [meuPerfil, ...outrosPerfisOrdenados]; //Juntamos o perfil que deve aparecer sempre em primeiro com o array ordenado.
 
-  return (
+  return ( //Retornamos os dados no array onde linha por linha ele deve mostrar os cards com os dados que cada linha possui.
     <div className="App">
       <h1>Cards da Equipe do Projeto PEI</h1>
       <div className="profiles-container">

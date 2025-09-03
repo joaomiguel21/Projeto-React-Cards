@@ -1,4 +1,4 @@
-interface ClasseCard { //Criação da classe e atributos que ela possui.
+interface ClasseCard { //Criação da pasta "Components" e da classe e atributos "Cards".
     key: number;
     linkImagem: string;
     nome: string;
@@ -6,7 +6,7 @@ interface ClasseCard { //Criação da classe e atributos que ela possui.
     linkGitHub: string;
 }
 
-function Card ({nome, titulo, linkImagem, linkGitHub }: ClasseCard){
+function Card ({nome, titulo, linkImagem, linkGitHub }: ClasseCard){ //Criação da função Card para a descontrução.
     return(
         <div className="card">
             <img src={linkImagem} alt={'Imagem de ${name}'} className="card-img" />
